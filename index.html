@@ -70,17 +70,15 @@
             <div class="hero-content">
                 <span class="hero-greeting"> Hey, I'm</span>
                 <h1 class="hero-heading">Gabrielė</h1>
-                <span class="hero-heading-subtitle"
-                >MSc Geo-Information Science Student</span
-                >
+                <span class="hero-heading-subtitle">MSc Geo-Information Science Student</span>
                 <div class="about-social-list">
                     <div class="social-links-row">
-                        <!--                        <a href="https://github.com/gabrieletijunaityte">-->
-                        <!--                            <img-->
-                        <!--                                    alt="Link to GitHub account"-->
-                        <!--                                    src="img/social_icons/github.svg"-->
-                        <!--                            />-->
-                        <!--                        </a>-->
+                        <a href="https://github.com/gabrieletijunaityte">
+                            <img
+                                    alt="Link to GitHub account"
+                                    src="img/social_icons/github.svg"
+                            />
+                        </a>
 
                         <a href="https://www.linkedin.com/in/gabriele-tijunaityte/">
                             <img
@@ -243,7 +241,10 @@
 </section>
 
 <section class="education" id="education">
-    <div class="container container-lg">
+    <div class="container container-lg"
+
+         data-aos="fade-up"
+         data-aos-duration="1000">
         <div class="education-title">
             <h2 class="title">Education</h2>
         </div>
@@ -314,50 +315,58 @@
         </div>
         <div class="contact-content">
             <p>
-                For more information about me or my work feel free to get in touch.
+                For more information about me or my work feel free to get in touch:
             </p>
         </div>
-
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSf7f4lBGO4mOF77IsSYynTKydD7lyJBuz1Ae9FUyOkRRTjYNA/formResponse?"
-              class="contactForm" data-aos="zoom-in" data-aos-duration="1000" enctype="text/plain"
-              id="gform"
-              name="gform"
-              onsubmit="submitted=true;" target="hidden_iframe">
-            <div class="input-box">
-                <input id="entry.1311198318" name="entry.1311198318" placeholder="Name" required type="text"/>
-                <input
-                        id="entry.525119271"
-                        name="entry.525119271"
-                        placeholder="Email Address"
-                        required
-                        type="email"
+        <div class="social-links-row">
+            <a href="https://www.linkedin.com/in/gabriele-tijunaityte/">
+                <img
+                        alt="Link to LinkedIn profile"
+                        src="img/social_icons/linkedin.svg"
                 />
-            </div>
+            </a>
+            <a class="email"> or <b>gabriele.tijunaityte@gmail.com</b></a>
 
-            <textarea
-                    cols="30"
-                    id="entry.281925923"
-                    name="entry.281925923"
-                    placeholder="Your Message"
-                    required
-                    rows="10"
-            ></textarea>
-            <div
-                    class="contact-button"
-                    data-aos="fade-zoom-in"
-                    data-aos-delay="500"
-                    data-aos-duration="1000"
-                    data-aos-easing="ease-in-out"
-            >
+        </div>
 
-                <button class="btn btn-blue" href="#!" name="submit" type="submit">
-                    Send Message
-                </button>
-            </div>
-        </form>
-        <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted) {}" style="display:none;"></iframe>
+        <!--        <form action="https://docs.google.com/forms/d/e/1FAIpQLSf7f4lBGO4mOF77IsSYynTKydD7lyJBuz1Ae9FUyOkRRTjYNA/formResponse?"-->
+        <!--              class="contactForm" data-aos="zoom-in" data-aos-duration="1000" enctype="text/plain"-->
+        <!--              id="gform"-->
+        <!--              name="gform"-->
+        <!--              onsubmit="submitted=true;" target="hidden_iframe">-->
+        <!--            <div class="input-box">-->
+        <!--                <input id="entry.1311198318" name="entry.1311198318" placeholder="Name" required type="text"/>-->
+        <!--                <input-->
+        <!--                        id="entry.525119271"-->
+        <!--                        name="entry.525119271"-->
+        <!--                        placeholder="Email Address"-->
+        <!--                        required-->
+        <!--                        type="email"-->
+        <!--                />-->
+        <!--            </div>-->
 
-        <div class="response"></div>
+        <!--            <textarea-->
+        <!--                    cols="30"-->
+        <!--                    id="entry.281925923"-->
+        <!--                    name="entry.281925923"-->
+        <!--                    placeholder="Your Message"-->
+        <!--                    required-->
+        <!--                    rows="10"-->
+        <!--            ></textarea>-->
+        <!--            <div-->
+        <!--                    class="contact-button"-->
+        <!--                    data-aos="fade-zoom-in"-->
+        <!--                    data-aos-delay="500"-->
+        <!--                    data-aos-duration="1000"-->
+        <!--                    data-aos-easing="ease-in-out"-->
+        <!--            >-->
+
+        <!--                <button class="btn btn-blue" href="#!" name="submit" type="submit">-->
+        <!--                    Send Message-->
+        <!--                </button>-->
+        <!--            </div>-->
+        <!--        </form>-->
+        <!--        <div class="response"></div>-->
     </div>
 </section>
 
@@ -394,13 +403,6 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
 ></script>
 <script src="assets/js/jquery.min.js"></script>
-<script type="text/javascript">var submitted = false;</script>
-<script type="text/javascript">
-    $('#gform').on('submit', function (e) {
-        $('#gform *').fadeOut(2000);
-        $('#gform').prepend('Your submission has been processed...');
-    });
-</script>
 <script src="js/main.js" type="module"></script>
 </body>
 </html>
