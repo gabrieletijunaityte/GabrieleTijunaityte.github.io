@@ -293,7 +293,7 @@ h5 {
 
 /* About section */
 .about {
-    padding: 7rem 0;
+    padding-top: 90px;
 }
 
 .about-row {
@@ -682,14 +682,6 @@ h5 {
     color: #555;
 }
 
-.projects {
-    padding-top: 90px;
-}
-
-.projects-title {
-    text-align: center;
-}
-
 .skills-panel {
     padding: 20px;
     border-radius: 5px;
@@ -841,7 +833,7 @@ h5 {
 }
 
 .projects {
-    padding: 7rem 0;
+    padding-top: 90px;
     background-color: var(--primary-bg-color);
 }
 
