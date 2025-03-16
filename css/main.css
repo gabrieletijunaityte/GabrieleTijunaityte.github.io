@@ -247,6 +247,21 @@ h5 {
 .hero-img img {
     display: block;
     position: relative;
+    max-height: 600px;
+    aspect-ratio: auto;
+}
+@media (max-width: 1000px) { /* Adjust breakpoint if needed */
+    .hero-img {
+        display: none; /* Hide image on small screens */
+    }
+
+    .hero-content {
+        text-align: center; /* Center text */
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .about-social-list {
@@ -673,7 +688,6 @@ h5 {
 
 .projects-title {
     text-align: center;
-    margin-bottom: 30px;
 }
 
 .skills-panel {
@@ -774,3 +788,146 @@ h5 {
     flex-direction: column;
     gap: 30px;
 }
+
+
+/* Certificates */
+.certificates {
+    padding-top: 90px;
+}
+
+.certificate-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Allows wrapping */
+    gap: 30px;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.certificate {
+    max-width: 300px;
+    text-align: center;
+}
+
+.certificate-img {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    height: 110px; /* Fixed height */
+    width: 100%; /* Full width */
+    overflow: hidden; /* Ensures excess height is cropped */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding-bottom: 20px;
+}
+
+.certificate-img img {
+    width: 100%; /* Make image fill width */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%; /* Ensure it covers the full height */
+    object-fit: cover; /* Crop excess height */
+}
+
+.certificate-img:hover {
+    transform: scale(1.05);
+}
+
+.hover-highlight {
+    transition: filter 0.2s ease-in-out;
+}
+
+.certificate-img:hover .hover-highlight {
+    filter: brightness(1.2);
+}
+
+.projects {
+    padding: 7rem 0;
+    background-color: var(--primary-bg-color);
+}
+
+.projects-title {
+    text-align: center;
+}
+
+.projects-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-box {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    max-width: 510px;
+}
+
+.project-box a {
+    display: inline-block;
+}
+
+.project-box:hover .project-mask {
+    opacity: 1;
+    visibility: visible;
+}
+
+.project-box:hover .project-mask .project-caption {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.project-box:hover .project-img {
+    transform: scale(1.1);
+    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+    width: 100%;
+}
+
+.project-img {
+    transform: scale(1);
+    width: 100%;
+    height: 400px;
+    transition: all 2s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.project-mask {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    height: 100%;
+    position: absolute;
+    transition: all 0.5s ease-in-out 0s;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.project-mask p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: left;
+}
+
+.project-mask .project-caption {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: left;
+    transition: all 0.5s ease-in-out 0s;
+    opacity: 0;
+}
+
+.project-mask p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: left;
+}
+
+
+
