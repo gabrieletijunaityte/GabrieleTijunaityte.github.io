@@ -1,19 +1,19 @@
 "use strict";
-import form from "./form.js";
-import skillbar from "./skillbar.js";
+// import form from "./form.js";
+// import skillbar from "./skillbar.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     once: true,
   });
-  form();
-  skillbar();
+  // form();
+  // skillbar();
 
   const nav = document.querySelector("#nav");
   const navBtn = document.querySelector("#nav-btn");
   const navBtnImg = document.querySelector("#nav-btn-img");
 
-  //Hamburger menu
+  //Hamburger menu toggle
   navBtn.onclick = () => {
     if (nav.classList.toggle("open")) {
       navBtnImg.src = "img/icons/close.svg";
@@ -21,6 +21,14 @@ document.addEventListener("DOMContentLoaded", () => {
       navBtnImg.src = "img/icons/open.svg";
     }
   };
+
+  // Close nav when any nav link is clicked (mobile UX)
+  document.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("open");
+      navBtnImg.src = "img/icons/open.svg";
+    });
+  });
 
   window.addEventListener("scroll", function () {
     const header = document.querySelector("#header");
