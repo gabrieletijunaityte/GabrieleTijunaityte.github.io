@@ -1,19 +1,16 @@
 "use strict";
-// import form from "./form.js";
-// import skillbar from "./skillbar.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  AOS.init({
-    once: true,
-  });
-  // form();
-  // skillbar();
+  AOS.init({ once: true });
 
   const nav = document.querySelector("#nav");
   const navBtn = document.querySelector("#nav-btn");
   const navBtnImg = document.querySelector("#nav-btn-img");
+  const header = document.querySelector("#header");
+  const hero = document.querySelector("#about");
+  const goToTop = document.querySelector("#goToTop");
 
-  //Hamburger menu toggle
+  // Hamburger menu toggle
   navBtn.onclick = () => {
     if (nav.classList.toggle("open")) {
       navBtnImg.src = "img/icons/close.svg";
@@ -22,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // Close nav when any nav link is clicked (mobile UX)
+  // Close nav when any nav link is clicked (mobile)
   document.querySelectorAll(".nav-link").forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("open");
@@ -30,38 +27,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Sticky header + go-to-top after scrolling past hero
   window.addEventListener("scroll", function () {
-    const header = document.querySelector("#header");
-    const hero = document.querySelector("#home");
-    let triggerHeight = hero.offsetHeight - 170;
-
+    const triggerHeight = hero ? hero.offsetHeight - 170 : 200;
     if (window.scrollY > triggerHeight) {
       header.classList.add("header-sticky");
-      goToTop.classList.add("reveal");
+      if (goToTop) goToTop.classList.add("reveal");
     } else {
       header.classList.remove("header-sticky");
-      goToTop.classList.remove("reveal");
+      if (goToTop) goToTop.classList.remove("reveal");
     }
   });
 
-  let sections = document.querySelectorAll("section");
-  let navLinks = document.querySelectorAll("header nav a");
+  // Scroll-based active nav link highlighting
+  const sections = document.querySelectorAll("section[id], div[id]");
+  const navLinks = document.querySelectorAll("header nav a");
 
-  window.onscroll = () => {
+  window.addEventListener("scroll", () => {
+    let current = "";
     sections.forEach((sec) => {
-      let top = window.scrollY;
-      let offset = sec.offsetTop - 170;
-      let height = sec.offsetHeight;
-      let id = sec.getAttribute("id");
-
-      if (top >= offset && top < offset + height) {
-        navLinks.forEach((links) => {
-          links.classList.remove("active");
-          document
-            .querySelector("header nav a[href*=" + id + "]")
-            .classList.add("active");
-        });
+      const offset = sec.offsetTop - 200;
+      if (window.scrollY >= offset) {
+        current = sec.getAttribute("id");
       }
     });
-  };
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === `#${current}`) {
+        link.classList.add("active");
+      }
+    });
+  });
 });
