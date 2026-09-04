@@ -14,32 +14,21 @@
 </head>
 
 <body>
+    <!-- ===== HEADER ===== -->
     <header class="header" id="header">
         <div class="container container-lg">
             <div class="header-nav">
-                <a class="logo" data-aos="fade-down" data-aos-duration="1000" href="#home">Gabriele Tijunaityte</a>
+                <a class="logo" href="#about">Gabrielė Tijūnaitytė</a>
                 <nav class="nav" id="nav">
-                    <ul class="nav-list" data-aos="fade-down" data-aos-duration="1000">
+                    <ul class="nav-list">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experience">Experience</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#education">Education</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#certificates">Certificates</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Highlights</a>
+                            <a class="nav-link active" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#publications">Publications</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#resume">Resume</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -53,14 +42,21 @@
         </div>
     </header>
 
-    <section class="hero" id="home">
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="about">
         <div class="container container-lg">
-            <div class="hero-row" data-aos="fade-zoom-in" data-aos-delay="500" data-aos-duration="1000"
+            <div class="hero-row" data-aos="fade-zoom-in" data-aos-delay="300" data-aos-duration="1000"
                 data-aos-easing="ease-in-out">
-                <div class="hero-content">
-                    <h1 class="hero-heading">Gabrielė</h1>
-                    <div class="hero-greetings-row">
-                        <span class="hero-greeting">✦ PhD Researcher  in AI for Earth Observations.</span>
+
+                <!-- LEFT: intro -->
+                <div class="hero-content hero-content--left">
+                    <h1 class="hero-heading">Gabrielė<br>Tijūnaitytė</h1>
+
+                    <div class="hero-greetings-row hero-greetings-row--left">
+                        <span class="hero-greeting">✦ PhD Researcher in AI for Earth Observations</span>
+                    </div>
+                    <div class="hero-greetings-row hero-greetings-row--left" style="margin-top: 8px;">
+                        <span class="hero-greeting">📍 Bonn, Germany</span>
                         <a class="hero-greeting hero-greeting-link" href="https://github.com/gabrieletijunaityte"
                             target="_blank">
                             <img alt="" src="img/social_icons/github.svg" /> GitHub
@@ -69,187 +65,120 @@
                             href="https://www.linkedin.com/in/gabriele-tijunaityte/" target="_blank">
                             <img alt="" src="img/social_icons/linkedin.svg" /> LinkedIn
                         </a>
-                        <a class="hero-greeting hero-greeting-link" href="#contact">Contact Me</a>
+                        <a class="hero-greeting hero-greeting-link" href="mailto:gabriele.tijunaityte@gmail.com">
+                            <img alt="" src="img/social_icons/email.svg" /> Email
+                        </a>
                     </div>
-                    <div class="hero-actions">
-                        <div class="social-links-row">
-                            <!-- <a class="btn btn-blue" href="https://gabrieletijunaityte.github.io/documents/cv.pdf"
-                            target="_blank">Download CV</a> -->
 
-                        </div>
+                    <div class="hero-actions--left">
+                        <a class="btn btn-blue" href="#resume">Resume</a>
+                        <a class="btn btn-white" href="#contact">Get in Touch</a>
                     </div>
                 </div>
+
+                <!-- RIGHT: photo -->
                 <div class="hero-img">
-                    <img alt="Picture of me." src="img/hero/hero_2.png" />
+                    <img alt="Picture of Gabrielė." src="img/hero/hero_2.png" />
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-title">
-                <h2 class="title">About Me</h2>
-            </div>
+    <!-- ===== ABOUT + SKILLS ===== -->
+    <section class="about-section" id="about-text">
+        <div class="container container-lg">
+            <div class="about-skills-row" data-aos="fade-up" data-aos-duration="1000">
 
-            <div class="about-row">
-                <div class="about-content" data-aos="fade-up" data-aos-duration="1000">
+                <!-- LEFT: About text -->
+                <div class="about-text-col">
+                    <h2 class="col-heading">About</h2>
                     <p class="about-descr">
-                        I am Gabrielė Tijūnaitytė, a <b>PhD Researcher</b> at the MEO-Lab, University of Bonn, specializing in AI for Earth Observations.
+                        I am Gabrielė Tijūnaitytė, a <b>PhD Researcher</b> at the MEO-Lab, University of Bonn,
+                        specializing in AI for Earth Observations.
                         <br /><br />
-                        With a strong foundation in Geo-Information Science, my work lies at the intersection of deep learning, computer vision, and geospatial analysis. My current research focuses on Implicit Neural Representations for Geospatial Data—specifically, learning better continuous neural representations of the Earth and its dynamics from Earth Observation data.
-                         I am dedicated to building impactful, data-driven solutions to environmental challenges, drawing on my broader expertise in multi-modal satellite imagery, large vision-language models, and contrastive deep learning.
+                        With a strong foundation in Geo-Information Science, my work lies at the intersection of
+                        deep learning, computer vision, and geospatial analysis. My current research focuses on
+                        Implicit Neural Representations for Geospatial Data,  learning continuous
+                        neural representations of the Earth and its dynamics from Earth Observation data.
+                               <br /><br />
+                        I am dedicated to building impactful, data-driven solutions to environmental challenges,
+                        drawing on my broader expertise in multi-modal satellite imagery, large vision-language
+                        models, and contrastive deep learning.
                         <br /><br />
                         Outside of research, I enjoy trying out new recipes and running.
                     </p>
-
                 </div>
 
-                <div class="about-skills" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
-                    <div class="skills-panel">
-                        <h3 class="skills-title">AI & Machine Learning</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Deep Learning</span>
-                            <span class="skill-tag">Computer Vision</span>
-                            <span class="skill-tag">Contrastive Learning</span>
-                            <span class="skill-tag">Vision–Language Models</span>
-                            <span class="skill-tag">Fine-tuning</span>
-                            <span class="skill-tag">Foundation Models</span>
-                            <span class="skill-tag">Explainability</span>
-                            <span class="skill-tag">Machine Learning</span>
+                <!-- RIGHT: Skills grid -->
+                <div class="about-skills-col" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                    <h2 class="col-heading">Skills</h2>
+                    <div class="skill-category-grid">
+
+                        <div class="skill-category-card">
+                            <h3 class="skill-category-title">AI &amp; Machine Learning</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Deep Learning</span>
+                                <span class="skill-tag">Computer Vision</span>
+                                <span class="skill-tag">Contrastive Learning</span>
+                                <span class="skill-tag">Vision–Language Models</span>
+                                <span class="skill-tag">Foundation Models</span>
+                                <span class="skill-tag">Explainability</span>
+                                <span class="skill-tag">Interpretability</span>
+                                <span class="skill-tag">Representation Learning</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skills-panel">
-                        <h3 class="skills-title">Geospatial & Earth Observation</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Remote Sensing</span>
-                            <span class="skill-tag">Multi-modal Satellite Imagery</span>
-                            <span class="skill-tag">Google Earth Engine</span>
-                            <span class="skill-tag">QGIS</span>
-                            <span class="skill-tag">ArcGIS Pro</span>
-                            <span class="skill-tag">SNAP</span>
+
+                        <div class="skill-category-card">
+                            <h3 class="skill-category-title">Programming &amp; Frameworks</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">PyTorch</span>
+                                <span class="skill-tag">PyTorch Lightning</span>
+                                <span class="skill-tag">Hydra</span>
+                                <span class="skill-tag">R</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">Bash/Shell</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skills-panel">
-                        <h3 class="skills-title">Programming & Frameworks</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Python</span>
-                            <span class="skill-tag">PyTorch</span>
-                            <span class="skill-tag">PyTorch Lightning</span>
-                            <span class="skill-tag">Scikit-learn</span>
-                            <span class="skill-tag">Rasterio</span>
-                            <span class="skill-tag">GeoPandas</span>
-                            <span class="skill-tag">R</span>
-                            <span class="skill-tag">SQL</span>
-                            <span class="skill-tag">Bash/Shell</span>
+
+                        <div class="skill-category-card">
+                            <h3 class="skill-category-title">Geospatial &amp; Earth Observation</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Remote Sensing</span>
+                                <span class="skill-tag">Multi-modal Satellite Imagery</span>
+                                <span class="skill-tag">Google Earth Engine</span>
+                                <span class="skill-tag">QGIS</span>
+                                <span class="skill-tag">ArcGIS Pro</span>
+                                <span class="skill-tag">SNAP</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="skills-panel">
-                        <h3 class="skills-title">Tools & Infrastructure</h3>
-                        <div class="skills-list">
-                            <span class="skill-tag">Git / GitHub</span>
-                            <span class="skill-tag">SLURM (HPC)</span>
-                            <span class="skill-tag">GPU Programming</span>
-                            <span class="skill-tag">Big Data Processing</span>
-                            <span class="skill-tag">Test-Driven Development</span>
-                            <span class="skill-tag">Object Oriented Programming</span>
+
+                        <div class="skill-category-card">
+                            <h3 class="skill-category-title">Tools &amp; Infrastructure</h3>
+                            <div class="skills-list">
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">SLURM (HPC)</span>
+                                <span class="skill-tag">GPU Programming</span>
+                                <span class="skill-tag">Big Data Processing</span>
+                                <span class="skill-tag">Test-Driven Development</span>
+                                <span class="skill-tag">Object Oriented Programming</span>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="education" id="experience">
-        <div class="container container-lg" data-aos="fade-up" data-aos-duration="1000">
-            <div class="education-title">
-                <h2 class="title">Experience</h2>
-            </div>
-
-            <div class="education-timeline">
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">Oct, 2026–Present</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">PhD Researcher</h3>
-                        <h4 class="uni-title"><a href="https://meo-lab.com" target="_blank" style="color:var(--secondary-accent);">MEO-Lab</a>, University of Bonn</h4>
-                        <p class="uni-description">Researching <strong>Implicit Neural Representations for Geospatial Data.</strong> Focus on learning continuous neural representations of Earth and its dynamics from Earth Observation data.</p>
                     </div>
                 </div>
 
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">Dec, 2025–Oct, 2026</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">AI Research Engineer</h3>
-                        <h4 class="uni-title">Artificial Intelligence group, Wageningen University</h4>
-                        <ul class="uni-description uni-list">
-                            <li>Served as a main contributor to <a href="https://github.com/WUR-AI/aether" target="_blank" style="color:var(--secondary-accent);">AETHER</a>, an ESA-funded project focused on developing self-explainable AI for Earth Observation.</li>
-                            <li>Aligned EO embeddings with language space to enable open-vocabulary interpretability and generate natural-language grounded explanations for model predictions.</li>
-                            <li>Fostered a collaborative research culture by coordinating internal training labs and organising reading sprints.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">Jun–Nov, 2025</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">Data Science Intern</h3>
-                        <h4 class="uni-title">Wageningen University x Deltares</h4>
-                        <p class="uni-description">Investigated architecture customisation and fine-tuning of
-                            <strong>Large Vision–Language Models</strong> for dam infrastructure classification and
-                            geo-reasoning applications.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">Aug–Dec, 2024</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">Teaching Assistant</h3>
-                        <h4 class="uni-title">Wageningen University</h4>
-                        <p class="uni-description">Supported teaching and practicals in Geoscripting and Big Data
-                            courses — covering scripting for spatial analysis and data processing using Python, R, and
-                            Bash.</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">May–Jul, 2024</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">Academic Consultancy Training</h3>
-                        <h4 class="uni-title">Wageningen University × Space4Good</h4>
-                        <p class="uni-description">Led a student team in developing a <strong>deep learning-based
-                                super-resolution pipeline</strong> to enhance road detection accuracy in satellite
-                            imagery. <a href="https://www.space4good.com/post/detecting-invisible-roads"
-                                style="color: var(--secondary-accent);" target="_blank">Read blog post.</a></p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">Apr, 2021–May, 2023</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">Research Aide</h3>
-                        <h4 class="uni-title">Vilnius University</h4>
-                        <p class="uni-description">Developed a database for isotope records to support environmental
-                            research; conducted literature reviews and delivered presentations.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- ===== PUBLICATIONS ===== -->
-    <section class="publications" id="publications" data-aos="fade-up" data-aos-duration="1000">
+    <section class="publications-section" id="publications">
         <div class="container container-lg">
-            <div class="education-title">
-                <h2 class="title">Publications</h2>
-            </div>
-            <div class="pub-list">
+            <h2 class="col-heading" data-aos="fade-up" data-aos-duration="800">Publications</h2>
+            <div class="pub-grid" data-aos="fade-up" data-aos-duration="1000">
+
                 <div class="pub-item">
                     <div class="pub-venue">ECCV Marine Vision Workshop &middot; Poster &middot; 2026</div>
                     <h3 class="pub-title">
@@ -263,6 +192,7 @@
                         <a class="pub-badge" href="https://github.com/gabrieletijunaityte/PatchMatch" target="_blank">GitHub</a>
                     </div>
                 </div>
+
                 <div class="pub-item">
                     <div class="pub-venue">arXiv &middot; 2026</div>
                     <h3 class="pub-title">
@@ -270,269 +200,228 @@
                             Better Together: Evaluating the Complementarity of Earth Embedding Models
                         </a>
                     </h3>
-                    <p class="pub-authors">Thijs L van der Plas, Jacob JW Bakermans, Vishal Nedungadi, <b>Gabrielė Tijūnaitytė</b>, Marc Rußwurm, Ioannis N Athanasiadis</p>
+                    <p class="pub-authors">Thijs L van der Plas, Jacob JW Bakermans, Vishal Nedungadi,
+                        <b>Gabrielė Tijūnaitytė</b>, Marc Rußwurm, Ioannis N Athanasiadis</p>
                     <div class="pub-links">
                         <a class="pub-badge" href="https://arxiv.org/abs/2605.18667" target="_blank">arXiv</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="education" id="education">
-        <div class="container container-lg" data-aos="fade-up" data-aos-duration="1000">
-            <div class="education-title">
-                <h2 class="title">Education</h2>
-            </div>
-
-            <div class="education-timeline">
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">2023–2025</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">M.Sc. Geo-Information Science - Cum Laude</h3>
-                        <div class="uni-container">
-                            <h4 class="uni-title">Wageningen University</h4>
-                            <p class="uni-description">| GPA: 9.0/10.0</p>
-                        </div>
-                        <p class="uni-description"> Focus on Machine and Deep Learning & Data Sciences.</p>
-                        <div class="thesis-container">
-                            <p class="thesis-description"><strong>Thesis:</strong> Developed a contrastive deep learning
-                                framework for matching marine debris patches across multi-modal PlanetScope and
-                                Sentinel-2 imagery.</p>
-                            <p class="thesis-description"><strong>Award:</strong> Winner of the Folkert Hellinga MSc
-                                Award 2025 and the audience award for best pitch.</p>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">2021–2022</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">ERASMUS exchange</h3>
-                        <div class="uni-container">
-                            <h4 class="uni-title">University of Porto</h4>
-                            <p class="uni-description">| GPA: 9.8/10.0</p>
-                        </div>
-                        <p class="uni-description"> Focus on Remote Sensing & Environmental Sciences.</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <span class="tl-dot"></span>
-                    <div class="education-year">2019–2023</div>
-                    <div class="education-content">
-                        <h3 class="edu-title">B.Sc. Geology - Cum Laude</h3>
-                        <div class="uni-container">
-                            <h4 class="uni-title">Vilnius University</h4>
-                            <p class="uni-description">| GPA: 9.9/10.0</p>
-                        </div>
-                        <div class="thesis-container">
-                            <p class="thesis-description"><strong>Thesis:</strong> The Dynamics of Pilkosios Dunes
-                                Relief
-                                During
-                                2010-2022, Based on the Digital Elevation Model Analysis.</p>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-    </section>
-
-    <section class="certificates" id="certificates">
-        <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <div class="projects-title">
-                <h2 class="title">Certificates</h2>
-            </div>
-            <div class="certificate-row">
-                <div class="certificate">
-                    <a href="https://gabrieletijunaityte.github.io/documents/aquatic.pdf" target="_blank">
-                        <div class="certificate-img">
-                            <img src="img/certificates/Aquatic_veg.png">
-                        </div>
-                    </a>
-                    <p> NASA ARSET: Monitoring Aquatic Vegetation with Remote Sensing</p>
-                    <a href="https://appliedsciences.nasa.gov/get-involved/training/english/arset-monitoring-aquatic-vegetation-remote-sensing"
-                        target="_blank">Read More</a>
-                </div>
-                <div class="certificate">
-                    <a href="https://gabrieletijunaityte.github.io/documents/floods.pdf" target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/Floods.png">
-                        </div>
-                    </a>
-                    <p>NASA ARSET: Monitoring and Modeling Floods using Earth Observations</p>
-                    <a href="https://appliedsciences.nasa.gov/get-involved/training/english/arset-monitoring-and-modeling-floods-using-earth-observations"
-                        target="_blank">Read More</a>
-                </div>
-                <div class="certificate">
-                    <a href="https://gabrieletijunaityte.github.io/documents/data_associate.pdf" target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/datacamp.jpg">
-                        </div>
-                    </a>
-
-                    <p>Python Data Associate</p>
-                </div>
-                <div class="certificate">
-                    <a href="https://freecodecamp.org/certification/GabrieleTijunaityte/data-analysis-with-python-v7"
-                        target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/freecodecamp.png">
-                        </div>
-                    </a>
-
-                    <p>Data Analysis with Python</p>
-                </div>
-                <div class="certificate">
-                    <a href="https://www.freecodecamp.org/certification/GabrieleTijunaityte/scientific-computing-with-python-v7"
-                        target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/freecodecamp.png">
-                        </div>
-                    </a>
-                    <p>Scientific Computing with Python</p>
-                </div>
-                <div class="certificate">
-                    <a href="documents/fomo.jpg" target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/fomo.png">
-                        </div>
-                    </a>
-                    <p>Winter School on Foundation Models</p>
-                </div>
-                <div class="certificate">
-                    <a href="documents/gpu_programming.pdf" target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/gpu_programming.jpg">
-                        </div>
-                    </a>
-                    <p>GPU Programming</p>
-                    <a href="https://www.esciencecenter.nl/event/gpu-programming-6/" target="_blank">From eScience
-                        center</a>
-                </div>
-                <div class="certificate">
-                    <a href="https://gabrieletijunaityte.github.io/documents/boolean_certificate.pdf" target="_blank">
-                        <div class="certificate-img">
-                            <img class="hover-highlight" src="img/certificates/boolean_certificate.png">
-                        </div>
-                    </a>
-                    <p>HTML/CSS/JavaScript Coding Week</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="projects" id="projects">
+    <!-- ===== RESUME ===== -->
+    <section class="resume-page-section" id="resume">
         <div class="container container-lg">
-            <div class="projects-title">
-                <h2 class="title">Highlights</h2>
+            <h2 class="col-heading" data-aos="fade-up" data-aos-duration="800" style="margin-bottom: 40px;">Resume</h2>
+
+            <!-- Experience -->
+            <div class="resume-section-inner" data-aos="fade-up" data-aos-duration="1000">
+                <div class="resume-label">
+                    <span class="resume-label-text">Experience</span>
+                </div>
+                <div class="resume-body">
+                    <div class="education-timeline">
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">Oct 2026 – Present</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">PhD Researcher</h3>
+                                <h4 class="uni-title"><a href="https://meo-lab.com" target="_blank" style="color:var(--secondary-accent);">MEO-Lab</a>, University of Bonn</h4>
+                                <p class="uni-description">Researching <strong>Implicit Neural Representations for Geospatial Data.</strong> Focus on learning continuous neural representations of Earth and its dynamics from Earth Observation data.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">Dec 2025 – Oct 2026</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">AI Research Engineer</h3>
+                                <h4 class="uni-title">Artificial Intelligence group, Wageningen University</h4>
+                                <ul class="uni-description uni-list">
+                                    <li>Served as a main contributor to <a href="https://github.com/WUR-AI/aether" target="_blank" style="color:var(--secondary-accent);">AETHER</a>, an ESA-funded project focused on developing self-explainable AI for Earth Observation.</li>
+                                    <li>Aligned EO embeddings with language space to enable open-vocabulary interpretability and generate natural-language grounded explanations for model predictions.</li>
+                                    <li>Fostered a collaborative research culture by coordinating internal training labs and organising reading sprints.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">Jun – Nov 2025</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">Data Science Intern</h3>
+                                <h4 class="uni-title">Wageningen University × Deltares</h4>
+                                <p class="uni-description">Investigated architecture customisation and fine-tuning of <strong>Large Vision–Language Models</strong> for dam infrastructure classification and geo-reasoning applications.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">Aug – Dec 2024</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">Teaching Assistant</h3>
+                                <h4 class="uni-title">Wageningen University</h4>
+                                <p class="uni-description">Supported teaching and practicals in Geoscripting and Big Data courses — covering scripting for spatial analysis and data processing using Python, R, and Bash.</p>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">May – Jul 2024</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">Academic Consultancy Training</h3>
+                                <h4 class="uni-title">Wageningen University × Space4Good</h4>
+                                <p class="uni-description">Led a student team in developing a <strong>deep learning-based super-resolution pipeline</strong> to enhance road detection accuracy in satellite imagery.
+                                    <a href="https://www.space4good.com/post/detecting-invisible-roads"
+                                        style="color: var(--secondary-accent);" target="_blank">Read blog post.</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">Apr 2021 – May 2023</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">Research Aide</h3>
+                                <h4 class="uni-title">Vilnius University</h4>
+                                <p class="uni-description">Developed a database for isotope records to support environmental research; conducted literature reviews and delivered presentations.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
             </div>
 
-            <div class="projects-row">
-                <!-- MSc Award LinkedIn Post -->
-                <div class="project-linkedin-embed" data-aos="fade-up" data-aos-duration="1000">
-                    <h3 class="project-embed-label">🏆 Folkert Hellinga MSc Award 2025 — Best Thesis</h3>
-                    <div class="linkedin-embed-wrap">
-                        <iframe allowfullscreen="" frameborder="0" height="565"
-                            src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7395313412056043521?collapsed=1"
-                            title="Folkert Hellinga MSc Award LinkedIn post" width="504"></iframe>
-                    </div>
+            <div class="resume-divider"></div>
+
+            <!-- Education -->
+            <div class="resume-section-inner" data-aos="fade-up" data-aos-duration="1000">
+                <div class="resume-label">
+                    <span class="resume-label-text">Education</span>
                 </div>
-                <div class="project-box" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <img alt="AETHER GitHub project" class="project-img" src="./img/works/aether.png" />
-                    <div class="project-mask">
-                        <div class="project-caption">
-                            <h5 class="white">AETHER — ESA-funded EO Language AI</h5>
-                            <p class="white">Self-explainable AI via EO embeddings aligned to language. Open-vocab interpretability for geospatial foundation models.</p>
-                            <a href="https://github.com/WUR-AI/aether" style="color: lightskyblue" target="_blank">GitHub</a>
-                            <a href="https://arxiv.org/abs/2605.18667" style="color: lightskyblue" target="_blank">arXiv</a>
+                <div class="resume-body">
+                    <div class="education-timeline">
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">2023 – 2025</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">M.Sc. Geo-Information Science <span class="edu-honor">Cum Laude</span></h3>
+                                <div class="uni-container">
+                                    <h4 class="uni-title">Wageningen University</h4>
+                                    <p class="uni-description">| GPA: 9.0/10.0</p>
+                                </div>
+                                <p class="uni-description">Focus on Machine and Deep Learning &amp; Data Sciences.</p>
+                                <div class="thesis-container">
+                                    <p class="thesis-description"><strong>Thesis:</strong> Developed a contrastive deep learning framework for matching marine debris patches across multi-modal PlanetScope and Sentinel-2 imagery.</p>
+                                    <p class="thesis-description"><strong>Award:</strong> Winner of the Folkert Hellinga MSc Award 2025 and the audience award for best pitch.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="project-box" data-aos="fade-zoom-in" data-aos-duration="1000" data-aos-easing="ease-in-out">
-                    <img alt="" class="project-img" src="img/works/space4good.png" />
-                    <div class="project-mask">
-                        <div class="project-caption">
-                            <h5 class="white">Collaboration with Space4Good</h5>
-                            <p class="white">Led a student team applying deep learning-based super-resolution on
-                                satellite imagery to enhance road detection capacity.</p>
-                            <a href="https://storymaps.arcgis.com/stories/3c26a938ac8e468d9f8996a9d11fc36c"
-                                style="color: lightskyblue" target="_blank">See StoryMap</a>
-                            <a href="https://www.space4good.com/post/detecting-invisible-roads"
-                                style="color: lightskyblue" target="_blank"> Read Blog Post</a>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">2021 – 2022</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">ERASMUS Exchange</h3>
+                                <div class="uni-container">
+                                    <h4 class="uni-title">University of Porto</h4>
+                                    <p class="uni-description">| GPA: 9.8/10.0</p>
+                                </div>
+                                <p class="uni-description">Focus on Remote Sensing &amp; Environmental Sciences.</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="project-box" data-aos="fade-zoom-in" data-aos-delay="200" data-aos-duration="1000"
-                    data-aos-easing="ease-in-out">
-                    <img alt="" class="project-img"
-                        src="https://upload.wikimedia.org/wikipedia/commons/4/4d/Household_products%2C_Stap_op%2C_het_nieuwe_fietsspel.JPG" />
-                    <div class="project-mask">
-                        <div class="project-caption">
-                            <h5 class="white">Get On Game</h5>
-                            <p class="white">GetOnGame is a Java-based recreation of the classic Dutch card game "Stap
-                                Op" developed as a Software Engineering course project.</p>
-                            <a href="https://github.com/gabrieletijunaityte/GetOnGame" style="color: lightskyblue"
-                                target="_blank">See GitHub</a>
+
+                        <div class="education-item">
+                            <span class="tl-dot"></span>
+                            <div class="education-year">2019 – 2023</div>
+                            <div class="education-content">
+                                <h3 class="edu-title">B.Sc. Geology <span class="edu-honor">Cum Laude</span></h3>
+                                <div class="uni-container">
+                                    <h4 class="uni-title">Vilnius University</h4>
+                                    <p class="uni-description">| GPA: 9.9/10.0</p>
+                                </div>
+                                <div class="thesis-container">
+                                    <p class="thesis-description"><strong>Thesis:</strong> The Dynamics of Pilkosios Dunes Relief During 2010–2022, Based on the Digital Elevation Model Analysis.</p>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
-
 
         </div>
     </section>
 
-
-    <section class="contact" data-aos="fade-up" data-aos-duration="1000" id="contact">
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-page" id="contact">
         <div class="container">
-            <div class="contact-title">
-                <h2 class="title">Contact</h2>
-            </div>
-            <div class="contact-content">
-                <p>
-                    For more information about me or my work feel free to get in touch:
-                </p>
-            </div>
+            <h2 class="col-heading col-heading--center" data-aos="fade-up" data-aos-duration="800">Get in Touch</h2>
+            <p class="contact-intro" data-aos="fade-up" data-aos-duration="800">
+                For more information about me or my work, feel free to reach out.
+            </p>
+            <div class="contact-links-grid" data-aos="fade-up" data-aos-duration="1000">
 
-            <div class="contactForm">
-                <div class="social-links-row">
-                    <a href="https://www.linkedin.com/in/gabriele-tijunaityte/">
-                        <img alt="Link to LinkedIn profile" src="img/social_icons/linkedin.svg" />
-                    </a>
-                    <a class="email-link" href="mailto:gabriele.tijunaityte@gmail.com"
-                        title="gabriele.tijunaityte@gmail.com">
+                <a class="contact-card" href="mailto:gabriele.tijunaityte@gmail.com">
+                    <div class="contact-card-icon">
                         <img alt="Email" src="img/social_icons/email.svg" />
-                    </a>
-                </div>
-                <p class="contact-email-text">gabriele.tijunaityte@gmail.com</p>
-            </div>
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-label">Email</h3>
+                    </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
 
+                <a class="contact-card" href="https://www.linkedin.com/in/gabriele-tijunaityte/" target="_blank">
+                    <div class="contact-card-icon">
+                        <img alt="LinkedIn" src="img/social_icons/linkedin.svg" />
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-label">LinkedIn</h3>
+                    </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
+
+                <a class="contact-card" href="https://github.com/gabrieletijunaityte" target="_blank">
+                    <div class="contact-card-icon">
+                        <img alt="GitHub" src="img/social_icons/github.svg" />
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-label">GitHub</h3>
+                    </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
+
+                <a class="contact-card" href="https://www.researchgate.net/profile/Gabriele-Tijunaityte" target="_blank">
+                    <div class="contact-card-icon">
+                        <img alt="ResearchGate" src="img/social_icons/researchgate.svg" />
+                    </div>
+                    <div class="contact-card-body">
+                        <h3 class="contact-card-label">ResearchGate</h3>
+                    </div>
+                    <span class="contact-card-arrow">→</span>
+                </a>
+
+            </div>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
             <div class="footer-row">
-                <div class="social-links-row footer-social">
-                    <div class="footer-copyright">
-                        <p>&copy; 2026 Gabrielė Tijūnaitytė. All rights reserved.</p>
-                    </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2026 Gabrielė Tijūnaitytė. All rights reserved.</p>
                 </div>
             </div>
         </div>
     </footer>
 
     <div class="goToTop" id="goToTop">
-        <a href="#home">
+        <a href="#about">
             <img alt="Back to top" src="img/icons/arrow_up.svg" /></a>
     </div>
 
