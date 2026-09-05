@@ -1923,3 +1923,332 @@ a.hero-greeting-link:hover img {
 }
 
 /* pub-item already styled via .pub-item — inherits card look */
+
+/* ==============================================
+   RESUME TWO-COLUMN LAYOUT
+   ============================================== */
+
+/* Container: main timeline col (wider) + side col */
+.resume-two-col {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.resume-col-heading {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--secondary-accent);
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(59,91,219,0.15);
+}
+
+/* ==============================================
+   SKILL STACK (single column, no grid)
+   ============================================== */
+.skill-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ==============================================
+   TIMELINE FIX — description always wider
+   ============================================== */
+.education-item {
+    grid-template-columns: 24px minmax(80px, 110px) 1fr !important;
+}
+
+/* ==============================================
+   CERTIFICATES LIST
+   ============================================== */
+.cert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cert-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.cert-year {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--secondary-accent);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 36px;
+}
+
+.cert-body {
+    flex: 1;
+}
+
+.cert-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-accent);
+    margin: 0 0 2px;
+}
+
+.cert-org {
+    font-size: 12px;
+    color: var(--gray-text-color);
+    margin: 0 0 4px;
+}
+
+.cert-desc {
+    font-size: 13px;
+    color: var(--supportive-text-color);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ==============================================
+   RESPONSIVE — Tablet (≤ 900px)
+   ============================================== */
+@media (max-width: 900px) {
+    /* Hero: stack vertically, centre text */
+    .hero-row {
+        flex-direction: column;
+        row-gap: 32px;
+    }
+    .hero-content--left {
+        text-align: center;
+        align-items: center;
+    }
+    .hero-greetings-row--left {
+        justify-content: center;
+    }
+    .hero-actions--left {
+        justify-content: center;
+    }
+    .hero-img {
+        justify-content: center;
+        max-width: 340px;
+        margin: 0 auto;
+    }
+
+    /* About + Skills: stack */
+    .about-skills-row {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Publications: stack */
+    .pub-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Resume: stack each pair */
+    .resume-two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Contact: 2-col grid (works well on tablet) */
+    .contact-links-grid {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+/* ==============================================
+   RESPONSIVE — Mobile (≤ 600px)
+   ============================================== */
+@media (max-width: 600px) {
+    /* Skill category grid (about section) stays single col */
+    .skill-category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Timeline: stack year above content */
+    .education-item {
+        grid-template-columns: 24px 1fr !important;
+        grid-template-rows: auto auto;
+    }
+    .education-year {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .tl-dot {
+        grid-column: 1;
+        grid-row: 1 / 3;
+    }
+    .education-content {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    /* Contact: single column */
+    .contact-links-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Publication grid: single col */
+    .pub-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Sections: tighter padding */
+    .about-section,
+    .publications-section,
+    .resume-page-section,
+    .contact-page {
+        padding-top: 48px;
+        padding-bottom: 40px;
+    }
+}
+
+/* ==============================================
+   RESPONSIVE — Small mobile (≤ 420px)
+   ============================================== */
+@media (max-width: 420px) {
+    .hero-heading {
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+    }
+    .hero-img {
+        max-width: 260px;
+    }
+    .col-heading {
+        font-size: 18px;
+    }
+}
+
+/* ==============================================
+   CERTIFICATE IMAGE CARDS
+   ============================================== */
+.cert-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    background: var(--card-bg);
+    border: 1px solid var(--gray-color);
+    border-radius: var(--radius-sm);
+    padding: 10px 12px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    color: var(--main-text-color);
+}
+
+.cert-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+    border-color: rgba(59,91,219,0.25);
+}
+
+.cert-thumb {
+    width: 52px;
+    height: 38px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+    border: 1px solid var(--gray-color);
+}
+
+.cert-card-title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--primary-accent);
+}
+
+/* About section: simple single-column */
+.about-section .about-descr {
+    max-width: 780px;
+    font-size: clamp(0.95rem, 0.92rem + 0.18vw, 1.05rem);
+    line-height: 1.85;
+    color: var(--supportive-text-color);
+}
+
+/* Certificates: 2-column grid */
+.cert-card-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .cert-card-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── Centred About section ── */
+.about-section .col-heading {
+    display: block;
+    text-align: center;
+    border-image: none;
+    border-bottom: none;
+    margin-bottom: 16px;
+}
+.about-section .about-descr {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Certificate cards: visual-focused (restored from original) ── */
+.cert-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+}
+
+.cert-card {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.cert-thumb {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--gray-color);
+    flex-shrink: unset;
+    display: block;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cert-card:hover .cert-thumb {
+    transform: scale(1.04);
+    filter: brightness(1.15);
+}
+
+.cert-card-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--supportive-text-color);
+    padding: 10px 10px 12px;
+}
+
+@media (max-width: 600px) {
+    .cert-card-list {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
