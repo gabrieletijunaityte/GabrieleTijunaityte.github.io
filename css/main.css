@@ -2047,12 +2047,41 @@ a.hero-greeting-link:hover img {
         grid-template-columns: 1fr;
     }
 
-    /* Resume: stack each pair */
-    .resume-two-col {
-        grid-template-columns: 1fr;
-        gap: 40px;
+
+    /* Resume: stack and reorder entire section */
+    #resume .container {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
     }
 
+    #resume .container > * {
+        margin: 0 !important;
+    }
+
+    .resume-two-col {
+        display: contents !important;
+    }
+
+    .resume-divider {
+        display: none !important;
+    }
+
+    .resume-top-row .resume-main-col {
+        order: 1; /* Experience */
+    }
+
+    .resume-bottom-row .resume-main-col {
+        order: 2; /* Education */
+    }
+
+    .resume-top-row .resume-side-col {
+        order: 3; /* Skills */
+    }
+
+    .resume-bottom-row .resume-side-col {
+        order: 4; /* Certificates */
+    }
     /* Contact: 2-col grid (works well on tablet) */
     .contact-links-grid {
         max-width: 100%;
