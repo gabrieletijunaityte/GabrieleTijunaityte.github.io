@@ -47,6 +47,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // buttons
         patchMatchButton.addEventListener("click", handlePatchMatchPredictionClick);
+        const patchMatchButtonMobile = document.getElementById("PatchMatch-button-mobile");
+        if (patchMatchButtonMobile) {
+            patchMatchButtonMobile.addEventListener("click", handlePatchMatchPredictionClick);
+        }
 
         // Help Modal
         const helpButton = document.getElementById("help-button");
@@ -113,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Get PS question tile
         questionImage.src = question.questionImage.src;
+        const mobileImg = document.getElementById("PS_tile_mobile");
+        if (mobileImg) mobileImg.src = question.questionImage.src;
 
         // Get correct answer
         const correctIndex = question.images.findIndex(img => img.correct);
@@ -195,19 +201,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function showPatchMatchCorrect(show = true) {
+        const modelPredictionMobile = document.getElementById("prediction-status-mobile");
         if (show) {
             modelPrediction.style.visibility = "visible";
+            if (modelPredictionMobile) modelPredictionMobile.style.visibility = "visible";
             if (modelCorrect) {
                 modelPrediction.style.color = "green";
                 modelPrediction.textContent = "PatchMatch is Correct!";
+                if (modelPredictionMobile) {
+                    modelPredictionMobile.style.color = "green";
+                    modelPredictionMobile.textContent = "PatchMatch is Correct!";
+                }
             } else {
                 modelPrediction.style.color = "red";
                 modelPrediction.textContent = "PatchMatch is Incorrect";
+                if (modelPredictionMobile) {
+                    modelPredictionMobile.style.color = "red";
+                    modelPredictionMobile.textContent = "PatchMatch is Incorrect";
+                }
             }
         } else {
             if (gameMode === 'play') {
                 feedbackBox.style.visibility = "hidden";
                 modelPrediction.style.visibility = "hidden";
+                if (modelPredictionMobile) modelPredictionMobile.style.visibility = "hidden";
             }
         }
     }
@@ -230,6 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if (show) {
             console.log(correctAnswer)
             imageContainers.forEach((container) => {
+                // Remember what the user had before we overwrite
+                container.dataset.savedBg = container.style.background || "";
                 container.classList.add("clicked");
                 container.style.pointerEvents = "none";
                 if (container.id === correctAnswer) {
@@ -240,7 +259,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         } else {
             imageContainers.forEach(container => {
-                container.style.background = "none";
+                // Restore the user's red/green guesses
+                container.style.background = container.dataset.savedBg || "none";
                 container.classList.remove("clicked");
             });
         }
@@ -285,6 +305,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 container.addEventListener("click", handleImageClick);
                 container.style.background = "none";
                 container.classList.remove("clicked");
+                container.dataset.savedBg = ""; // Reset the memory for the new question
             });
         } else {
             imageContainers.forEach(imageContainer => imageContainer.style.pointerEvents = "none");

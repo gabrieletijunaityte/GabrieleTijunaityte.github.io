@@ -22,6 +22,16 @@
         <div class="score-text">:</div>
         <div class='score-text' id="PatchMatch" style="color:#f6992a">0</div>
     </div>
+    <div class="mobile-patchmatch-container">
+        <button class="prediction-button" id="PatchMatch-button-mobile">Show PatchMatch prediction</button>
+        <div class="prediction-status" id="prediction-status-mobile">PatchMatch is Correct!</div>
+    </div>
+    <div class="mobile-question-text-container">
+        <div class="mobile-question-text">Find the match for this tile &rarr;</div>
+    </div>
+    <div class="mobile-question-container">
+        <img class="question-image" id="PS_tile_mobile" src="imgs/demo.png">
+    </div>
 </header>
 
 <div class="main" id="question">
@@ -38,24 +48,25 @@
             </div>
         </div>
 
-        <div class="user-control-container" id="feedback-box">
-            <div class="controls-container">
-                <button class="control-button" id="restart-button">Restart</button>
-                <button class="control-button" id="next-button">Next</button>
-            </div>
-            <div class="user-feedback-container">
-                <div class="user-feedback-text" id="user-feedback-text">Make a guess next time!</div>
-            </div>
-        </div>
-
-        <div class="PatchMatch-container">
-            <div class="prediction-button-container">
-                <button class="prediction-button" id="PatchMatch-button">PatchMatch prediction</button>
-            </div>
-            <div class="prediction-status-container">
-                <div class="prediction-status" id="prediction-status">PatchMatch is Correct!</div>
+        <div class="bottom-controls-wrapper">
+            <div class="user-control-container" id="feedback-box">
+                <div class="controls-container">
+                    <button class="control-button" id="restart-button">Restart</button>
+                    <button class="control-button" id="next-button">Next</button>
+                </div>
+                <div class="user-feedback-container">
+                    <div class="user-feedback-text" id="user-feedback-text">Make a guess next time!</div>
+                </div>
             </div>
 
+            <div class="PatchMatch-container">
+                <div class="prediction-button-container">
+                    <button class="prediction-button" id="PatchMatch-button">Show PatchMatch prediction</button>
+                </div>
+                <div class="prediction-status-container">
+                    <div class="prediction-status" id="prediction-status">PatchMatch is Correct!</div>
+                </div>
+            </div>
         </div>
 
 
