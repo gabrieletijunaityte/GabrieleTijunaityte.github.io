@@ -1604,7 +1604,7 @@ a.hero-greeting-link:hover img {
 /* ── Resume section ── */
 .resume-page-section {
     padding: 72px 0 60px;
-    background: var(--hero-bg);
+    background: var(--primary-bg-color);
     border-top: 1px solid var(--gray-color);
 }
 
@@ -1662,7 +1662,7 @@ a.hero-greeting-link:hover img {
 /* ── Contact section ── */
 .contact-page {
     padding: 72px 0 100px;
-    background: var(--primary-bg-color);
+    background: var(--hero-bg);
     border-top: 1px solid var(--gray-color);
     text-align: center;
 }
@@ -2279,5 +2279,30 @@ a.hero-greeting-link:hover img {
 @media (max-width: 600px) {
     .cert-card-list {
         grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}
+
+/* ── Hero name: one row on wide displays, one word per row otherwise ── */
+.hero-name-part {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@media (min-width: 1321px) {
+    .hero-content {
+        flex-basis: 660px;
+        max-width: 660px;
+    }
+    .hero-heading {
+        font-size: 4rem;
+    }
+}
+
+/* ── Contact cards: 2-col grid on wide displays ── */
+@media (min-width: 901px) {
+    .contact-links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 760px;
     }
 }
